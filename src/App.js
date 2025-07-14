@@ -9,7 +9,8 @@ function App() {
   }, []);
 
   const fetchAreas = async () => {
-    const res = await axios.get('http://localhost:5000/api/parking-areas'); // replace with deployed URL later
+    const res = await axios.get('https://parking-backend-pepg.onrender.com/api/parking-areas');
+ // replace with deployed URL later
     setAreas(res.data);
   };
 
@@ -19,6 +20,11 @@ function App() {
        // userId: 'dummyUser123', // in real app use auth
       //  parkingAreaId,
     //  });
+    const res = await axios.post('https://parking-backend-pepg.onrender.com/api/bookings', {
+  userId: 'dummyUser123',
+  parkingAreaId,
+});
+
       alert('✅ Spot booked!');
       fetchAreas(); // refresh data to show updated available spots
     } catch (err) {
