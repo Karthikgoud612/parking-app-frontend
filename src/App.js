@@ -16,9 +16,9 @@ function App() {
   const handleBook = async (parkingAreaId) => {
     try {
      // const res = await axios.post('http://localhost:5000/api/bookings', {
-        userId: 'dummyUser123', // in real app use auth
-        parkingAreaId,
-      });
+       // userId: 'dummyUser123', // in real app use auth
+      //  parkingAreaId,
+    //  });
       alert('✅ Spot booked!');
       fetchAreas(); // refresh data to show updated available spots
     } catch (err) {
